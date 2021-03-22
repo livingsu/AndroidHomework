@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -88,6 +89,11 @@ public class UploadActivity extends AppCompatActivity {
         //TODO 3
         // 创建Retrofit实例
         // 生成api对象
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Constants.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        api=retrofit.create(IApi.class);
     }
 
     private void getFile(int requestCode, String type, String title) {
@@ -123,6 +129,30 @@ public class UploadActivity extends AppCompatActivity {
         //TODO 5
         // 使用api.submitMessage()方法提交留言
         // 如果提交成功则关闭activity，否则弹出toast
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                MultipartBody.Part coverPart=MultipartBody.Part.createFormData("image","cover.png",
+                        RequestBody.create(MediaType.parse("multipart/form-data"),coverImageData));
+                MultipartBody.Part fromPart=MultipartBody.Part.createFormData("from",Constants.USER_NAME);
+                MultipartBody.Part toPart=MultipartBody.Part.createFormData("to",to);
+                MultipartBody.Part contentPart=MultipartBody.Part.createFormData("content",content);
+
+                Call<UploadResponse> call= api.submitMessage(Constants.STUDENT_ID,"",fromPart,toPart,contentPart,coverPart,Constants.token);
+                try {
+                    Response<UploadResponse> response=call.execute();
+                    if(response.isSuccessful()) {
+                        Toast.makeText(getApplicationContext(), "上传成功", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }else  Toast.makeText(getApplicationContext(), "上传失败", Toast.LENGTH_SHORT).show();
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"网络异常"+e.toString(),Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).start();
+
+
     }
 
 
