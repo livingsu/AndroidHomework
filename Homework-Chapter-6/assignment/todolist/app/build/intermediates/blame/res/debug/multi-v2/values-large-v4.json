@@ -4,7 +4,7 @@
             "outputFile": "D:\\livingsu\\大三下\\安卓应用开发\\Homework\\Homework-Chapter-6\\assignment\\todolist\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\6e8bbd927050765082b821d7445cc672\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\2036a6a87d4341a2a7e9252439a2aca9\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\b3c4201a809ebc4dce7919f2dbe853fb\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\93325cfbcc8ef4ae8673fa7310c972ad\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

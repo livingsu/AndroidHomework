@@ -4,7 +4,7 @@
             "outputFile": "D:\\livingsu\\大三下\\安卓应用开发\\Homework\\Homework-Chapter-6\\assignment\\todolist\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\6e8bbd927050765082b821d7445cc672\\res\\values-v23\\values-v23.xml",
+                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\2036a6a87d4341a2a7e9252439a2aca9\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\a1221ed7427003b462f55b3e12151dc3\\res\\values-v23\\values-v23.xml",
+                    "source": "D:\\ASProjects\\GradleResource\\gradle-5.1.1\\caches\\transforms-2\\files-2.1\\52013e30bde66ff4a3382b701fb88316\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -3,6 +3,7 @@ package com.byted.camp.todolist;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +13,11 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.byted.camp.todolist.beans.Note;
 import com.byted.camp.todolist.beans.Priority;
 import com.byted.camp.todolist.beans.State;
 import com.byted.camp.todolist.db.TodoContract.TodoNote;
@@ -30,6 +33,8 @@ public class NoteActivity extends AppCompatActivity {
 
     private TodoDbHelper dbHelper;
     private SQLiteDatabase database;
+
+    private NoteOperator operator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +57,25 @@ public class NoteActivity extends AppCompatActivity {
         lowRadio = findViewById(R.id.btn_low);
         lowRadio.setChecked(true);
 
-        addBtn = findViewById(R.id.btn_add);
+        //TODO 2:note添加界面得到原来的note
+        //是否是更新界面
+        final boolean isUpdateActivity=getIntent().getBooleanExtra("isUpdateActivity",false);
+        final long note_id=getIntent().getLongExtra("note_id",-1);
+        String originContent=getIntent().getStringExtra("content");
+        Priority originPriority=Priority.from(getIntent().getIntExtra("priority",0));
+        //设置编辑界面中编辑框和多选框的默认值是原来的note值
+        editText.setText(originContent);
+        radioGroup.clearCheck();
+        int radio_id;
+        if(originPriority==Priority.Low){
+            radio_id=R.id.btn_low;
+        }else if(originPriority==Priority.Medium){
+            radio_id=R.id.btn_medium;
+        }else radio_id=R.id.btn_high;
+        RadioButton radioButton=findViewById(radio_id);
+        radioButton.setChecked(true);
 
+        addBtn = findViewById(R.id.btn_add);
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,15 +85,30 @@ public class NoteActivity extends AppCompatActivity {
                             "No content to add", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                boolean succeed = saveNote2Database(content.toString().trim(),
-                        getSelectedPriority());
-                if (succeed) {
-                    Toast.makeText(NoteActivity.this,
-                            "Note added", Toast.LENGTH_SHORT).show();
-                    setResult(Activity.RESULT_OK);
-                } else {
-                    Toast.makeText(NoteActivity.this,
-                            "Error", Toast.LENGTH_SHORT).show();
+
+                if(isUpdateActivity){
+                    //跳转到mainActivity,并要求main更新
+                    Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                    intent.putExtra("shouldUpdate",true);
+                    intent.putExtra("note_id",note_id);
+                    intent.putExtra("content",content.toString());
+                    intent.putExtra("priority",getSelectedPriority().intValue);
+
+                    startActivity(intent);
+                    Toast.makeText(getApplicationContext(),
+                            "更新提交:"+note_id+"\t"+content+"\t"+getSelectedPriority(), Toast.LENGTH_LONG).show();
+
+                }else{
+                    boolean succeed = saveNote2Database(content.toString().trim(),
+                            getSelectedPriority());
+                    if (succeed) {
+                        Toast.makeText(NoteActivity.this,
+                                "Note added", Toast.LENGTH_SHORT).show();
+                        setResult(Activity.RESULT_OK);
+                    } else {
+                        Toast.makeText(NoteActivity.this,
+                                "Error", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 finish();
             }

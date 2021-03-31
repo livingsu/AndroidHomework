@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: android.arch.lifecycle:viewmodel:1.1.1@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/7b102bda9e61112b052d21d68f6bee64/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/7b102bda9e61112b052d21d68f6bee64/res" />
-      <root url="file://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/7b102bda9e61112b052d21d68f6bee64/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/66059d996b8a636f330c23c7964afefd/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/66059d996b8a636f330c23c7964afefd/res" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/66059d996b8a636f330c23c7964afefd/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

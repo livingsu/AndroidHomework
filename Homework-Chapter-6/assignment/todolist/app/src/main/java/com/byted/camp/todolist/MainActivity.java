@@ -2,7 +2,9 @@ package com.byted.camp.todolist;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -17,6 +19,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.byted.camp.todolist.beans.Note;
 import com.byted.camp.todolist.beans.Priority;
@@ -34,6 +38,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE_ADD = 1002;
+    private static final String TAG = "MainActivity";
 
     private RecyclerView recyclerView;
     private NoteListAdapter notesAdapter;
@@ -68,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 LinearLayoutManager.VERTICAL, false));
         recyclerView.addItemDecoration(
                 new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        notesAdapter = new NoteListAdapter(new NoteOperator() {
+        notesAdapter = new NoteListAdapter(getBaseContext(),new NoteOperator() {
             @Override
             public void deleteNote(Note note) {
                 MainActivity.this.deleteNote(note);
@@ -76,12 +81,45 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void updateNote(Note note) {
-                MainActivity.this.updateNode(note);
+                MainActivity.this.updateNoteState(note);
             }
         });
         recyclerView.setAdapter(notesAdapter);
 
         notesAdapter.refresh(loadNotesFromDatabase());
+
+
+        //TODO 1:使用sharedPreference修改标题
+        SharedPreferences sharedPreferences=getPreferences(Context.MODE_PRIVATE);
+        int openTimes=sharedPreferences.getInt("openTimes",0); //找不到时，默认值是0
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putInt("openTimes",++openTimes);
+        editor.apply();
+        String str=getResources().getString(R.string.app_name);
+        setTitle(str+" "+ Integer.toString(openTimes));
+
+        //TODO 2:
+        //得到来自noteActivity的新note,并更新
+        if(getIntent().getBooleanExtra("shouldUpdate",false)){
+            long note_id=getIntent().getLongExtra("note_id",-1);
+            String content=getIntent().getStringExtra("content");
+            Priority priority=Priority.from(getIntent().getIntExtra("priority",0));
+            Toast.makeText(getApplicationContext(),
+                    "更新开始"+note_id+"\t"+content+"\t"+priority, Toast.LENGTH_LONG).show();
+            if(note_id!=-1){
+                Toast.makeText(getApplicationContext(),
+                        "更新成功"+note_id+"\t"+content+"\t"+priority, Toast.LENGTH_LONG).show();
+                Note note=new Note(note_id);
+                note.setContent(content);
+                note.setPriority(priority);
+
+                updateNoteContent(note);
+            }else{
+                Toast.makeText(getApplicationContext(),
+                        "更新失败", Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 
     @Override
@@ -171,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void updateNode(Note note) {
+    private void updateNoteState(Note note) {
         if (database == null) {
             return;
         }
@@ -185,5 +223,22 @@ public class MainActivity extends AppCompatActivity {
             notesAdapter.refresh(loadNotesFromDatabase());
         }
     }
+
+    private void updateNoteContent(Note note) {
+        if (database == null) {
+            return;
+        }
+        ContentValues values = new ContentValues();
+        values.put(TodoNote.COLUMN_CONTENT, note.getContent());
+        values.put(TodoNote.COLUMN_PRIORITY, note.getPriority().intValue);
+
+        int rows = database.update(TodoNote.TABLE_NAME, values,
+                TodoNote._ID + "=?",
+                new String[]{String.valueOf(note.id)});
+        if (rows > 0) {
+            notesAdapter.refresh(loadNotesFromDatabase());
+        }
+    }
+
 
 }
