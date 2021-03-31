@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:drawerlayout:28.0.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/8d7c8abd997500a9dba46c3f38295445/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/8d7c8abd997500a9dba46c3f38295445/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/8d7c8abd997500a9dba46c3f38295445/res" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../ASProjects/GradleResource/gradle-5.1.1/caches/transforms-2/files-2.1/8d7c8abd997500a9dba46c3f38295445/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
