@@ -724,6 +724,7 @@ id buttonLoad
 id buttonPanel
 id buttonPause
 id buttonPlay
+id buttonResume
 id canvas
 id center
 id centerCrop
