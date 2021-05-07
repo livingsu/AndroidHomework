@@ -66,6 +66,8 @@ public class SystemRecordActivity extends AppCompatActivity {
     private void recordVideo() {
         Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
         mp4Path = getOutputMediaPath();
+
+        System.out.println("路径："+mp4Path);
         intent.putExtra(MediaStore.EXTRA_OUTPUT,PathUtils.getUriForFile(this,mp4Path));
         intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY,1);
         if (intent.resolveActivity(getPackageManager()) != null) {
@@ -76,6 +78,8 @@ public class SystemRecordActivity extends AppCompatActivity {
 
     private String getOutputMediaPath() {
         File mediaStorageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+
+
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         File mediaFile = new File(mediaStorageDir, "IMG_" + timeStamp + ".mp4");
         if (!mediaFile.exists()) {

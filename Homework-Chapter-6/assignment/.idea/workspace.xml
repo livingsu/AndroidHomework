@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="151c9e42-1cfe-4e02-9ee1-b46682689a02" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-5/homework/app/src/main/java/com/bytedance/practice5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-5/homework/app/src/main/java/com/bytedance/practice5/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_9_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_9_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_9_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-7/AndroidStudy/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_9_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-8/app/src/main/java/com/bytedance/mediademo/SystemRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-8/app/src/main/java/com/bytedance/mediademo/SystemRecordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-8/app/src/main/res/xml/filepaths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-8/app/src/main/res/xml/filepaths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework-Chapter-8/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework-Chapter-8/gradle.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1sALZpNfAdsp2JaF8w3zIJxTMnc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../../../Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/todolist" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="151c9e42-1cfe-4e02-9ee1-b46682689a02" name="Default Changelist" comment="" />
+      <created>1620310505448</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620310505448</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620310545444">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620310545444" />
+  </component>
+</project>

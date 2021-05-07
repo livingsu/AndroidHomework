@@ -141,10 +141,14 @@ public class UploadActivity extends AppCompatActivity {
                 Call<UploadResponse> call= api.submitMessage(Constants.STUDENT_ID,"",fromPart,toPart,contentPart,coverPart,Constants.token);
                 try {
                     Response<UploadResponse> response=call.execute();
+                    System.out.println("得到请求："+"1:"+response.isSuccessful()+"2:"+response.code()+"3:"+response.headers());
+                    Looper.prepare();
                     if(response.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), "上传成功", Toast.LENGTH_SHORT).show();
                         finish();
                     }else  Toast.makeText(getApplicationContext(), "上传失败", Toast.LENGTH_SHORT).show();
+                    Looper.loop();
+                    return;
                 }catch (Exception e){
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(),"网络异常"+e.toString(),Toast.LENGTH_SHORT).show();
