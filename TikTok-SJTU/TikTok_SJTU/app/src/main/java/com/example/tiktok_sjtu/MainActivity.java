@@ -106,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
         assert response != null;
         return response.feeds;
     }
-    //TODO 2
-    // 用HttpUrlConnection实现获取留言列表数据，用Gson解析数据，更新UI（调用adapter.setData()方法）
+
+    // 用HttpUrlConnection实现获取视频列表数据，用Gson解析数据，更新UI（调用adapter.setData()方法）
     // 注意网络请求和UI更新分别应该放在哪个线程中
     private void getData(String studentId){
         new Thread(new Runnable() {

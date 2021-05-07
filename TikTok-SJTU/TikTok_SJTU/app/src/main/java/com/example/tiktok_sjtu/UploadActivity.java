@@ -103,7 +103,6 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     private void initNetwork() {
-        //TODO 3
         // 创建Retrofit实例
         // 生成api对象
         Retrofit retrofit = new Retrofit.Builder()
@@ -142,8 +141,7 @@ public class UploadActivity extends AppCompatActivity {
 
         System.out.println("上传数据："+(coverImageData.length+videoData.length));
 
-        //TODO 5
-        // 使用api.submitMessage()方法提交留言
+        // 使用api.submitMessage()方法提交视频
         // 如果提交成功则关闭activity，否则弹出toast
         new Thread(new Runnable() {
             @Override
@@ -173,12 +171,6 @@ public class UploadActivity extends AppCompatActivity {
                 }
             }
         }).start();
-
-    }
-
-
-    // TODO 7 选做 用URLConnection的方式实现提交
-    private void submitMessageWithURLConnection(){
 
     }
 
